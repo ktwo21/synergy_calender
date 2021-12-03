@@ -1117,6 +1117,11 @@ footer .copyright small {
     width: 90%;
   }
 }
+@media (max-width: 425px) {
+  .howto::after {
+    width: 100%;
+  }
+}
 .howto .title_container {
   display: flex;
   flex-flow: row wrap;
