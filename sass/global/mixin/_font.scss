@@ -1,0 +1,36 @@
+@mixin navigation-font {
+  font-size: 1.4rem;
+  font-weight: inherit;
+  letter-spacing: 0.1em;
+}
+
+@mixin sp-navigation-font {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+@mixin title-font {
+  font-size: min(calc(1.3rem + 2 * (100vw - 375px) / 905), 1.5rem);
+  font-weight: inherit;
+  line-height: calc(26 / 15);
+  letter-spacing: 0.1em;
+}
+
+@mixin sub-title {
+  font-size: min(calc(2rem + 10 * (100vw - 375px) / 905), 3rem);
+  font-weight: inherit;
+  line-height: calc(50 / 32);
+  letter-spacing: 0.15em;
+
+  @media (max-width: 500px) {
+    letter-spacing: 0.1em;
+  }
+}
+
+@mixin main-text {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: calc(28 / 14);
+  letter-spacing: 0.1em;
+}

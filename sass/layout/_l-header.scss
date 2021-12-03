@@ -1,0 +1,280 @@
+@use "../global/" as g;
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  padding: 0 40px;
+  width: 100%;
+  background: g.$header;
+  backdrop-filter: blur(3px);
+
+  @media (max-width: 435px) {
+    padding: 0 15px;
+  }
+
+  .header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+    height: 70px;
+
+    @media (min-width: 1440px) {
+      height: 80px;
+    }
+
+    .logo {
+      max-width: 175px;
+      width: max(calc(113px + 87 * (100vw - 375px) / 1545), 113px);
+      max-height: 31px;
+      height: max(calc(21px + 114 * (100vw - 375px) / 1545), 21px);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3.8vw;
+
+      li {
+        @include g.navigation-font;
+        font-weight: 600;
+        a {
+          white-space: nowrap;
+          transition: all 0.3s;
+
+          &:hover {
+            color: g.$accent;
+            transition: all 0.3s;
+          }
+        }
+      }
+    }
+
+    .header_cta_button {
+      margin-left: min(calc(45px + 22 * (100vw - 1280px) / 640), 67px);
+      @include g.button(43px, 1.4rem);
+
+      @media (min-width: 1440px) {
+        width: 227px;
+        height: 49px;
+        font-size: 1.5rem;
+        a {
+          padding: 0 45px;
+          line-height: 49px;
+          letter-spacing: 0.15em;
+        }
+      }
+    }
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+
+  // ここから🍔
+  .hamburger_button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background: white;
+    transition: all 0.3s;
+    z-index: 5;
+
+    .hamburger_line {
+      position: relative;
+      border-radius: 1px;
+      width: 16px;
+      height: 2px;
+      background: g.$text;
+      transition: all 0.3s;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        border-radius: 1px;
+        width: 16px;
+        height: 2px;
+        background: g.$text;
+        transition: all 0.3s;
+      }
+
+      &::before {
+        position: absolute;
+        top: 7px;
+      }
+      &::after {
+        position: absolute;
+        top: -7px;
+      }
+    }
+
+    &:hover {
+      background: g.$accent;
+      transition: all 0.3s;
+
+      .hamburger_line,
+      .hamburger_line::before,
+      .hamburger_line::after {
+        background: white;
+      }
+    }
+
+    &.open {
+      transition: all 0.3s;
+      .hamburger_line {
+        transition: all 0.3s;
+        background: rgba(255, 255, 255, 0);
+
+        &::before {
+          top: 0;
+          transform: rotate(45deg);
+          transition: all 0.3s;
+        }
+        &::after {
+          top: 0;
+          transform: rotate(-45deg);
+          transition: all 0.3s;
+        }
+      }
+    }
+
+    @media (max-width: 1023px) {
+      display: flex;
+    }
+  }
+
+  .hamburger_menu {
+    position: absolute;
+    top: 0;
+    right: -1000px;
+    z-index: 2;
+    display: none;
+    padding: 110px 0 0 45px;
+    width: 320px;
+    height: 100vh;
+    background: rgba(240, 201, 139, 0.8);
+    transition: all 0.3s;
+
+    &.open {
+      right: 0;
+      transition: all 0.3s;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      margin-bottom: 31px;
+      color: white;
+
+      li {
+        @include g.sp-navigation-font;
+      }
+    }
+
+    .header_cta_button {
+      @include g.button(50px, 1.5rem);
+      margin-bottom: 38px;
+      margin-left: -1.5em;
+      width: 230px;
+      text-align: center;
+    }
+
+    .share_button {
+      display: flex;
+      gap: 18px;
+      font-size: 1.5rem;
+      font-family: futura-pt, sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: 0.2em;
+      p {
+        line-height: 27px;
+        color: white;
+      }
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 22px;
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid white;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          background: white;
+          text-align: center;
+          transition: all 0.3s;
+
+          &:hover {
+            background: g.$accent;
+            transition: all 0.3s;
+
+            svg {
+              fill: white;
+            }
+          }
+
+          a {
+            display: inherit;
+          }
+
+          img {
+            object-fit: contain;
+          }
+        }
+
+        .twitter svg {
+          width: 14px;
+          height: 11px;
+        }
+
+        .facebook svg {
+          width: 7px;
+          height: 14px;
+        }
+        .line svg {
+          width: 13px;
+          height: 13px;
+        }
+      }
+    }
+    @media (max-width: 1023px) {
+      display: block;
+    }
+  }
+
+  .bg_gray {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+  }
+}

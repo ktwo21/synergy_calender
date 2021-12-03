@@ -1,0 +1,87 @@
+@use "../global/" as g;
+
+aside {
+  position: fixed;
+  top: 41%;
+  right: 40px;
+  transform: translateY(-41%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  width: 30px;
+  font-size: 1.4rem;
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.2em;
+
+  @media (min-width: 1800px) {
+    right: 9vw;
+  }
+  @media (max-width: 1190px) and (min-width: 1070px) {
+    right: 20px;
+  }
+
+  p {
+    width: 30px;
+    line-height: 27px;
+    writing-mode: vertical-rl;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    li {
+      border: 2px solid white;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      transition: all 0.3s;
+
+      &:hover {
+        border: 2px solid g.$accent;
+        background: g.$accent;
+        transition: all 0.3s;
+
+        svg {
+          fill: white;
+        }
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    .twitter svg {
+      width: 14px;
+      height: 11px;
+    }
+
+    .facebook svg {
+      width: 7px;
+      height: 14px;
+    }
+    .line svg {
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}

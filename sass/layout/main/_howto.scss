@@ -1,0 +1,183 @@
+@use "../../global/" as g;
+
+.howto {
+  position: relative;
+  margin: 0 auto;
+  padding: min(calc(47px + 108 * (100vw - 375px) / 649), 155px) 25px min(calc(58px + 52 * (100vw - 375px) / 649), 110px);
+  max-width: 1280px;
+  width: 100%;
+
+  &::after {
+    content: url(../image/section_line.svg);
+    position: absolute;
+    top: -6em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: block;
+    padding: 0 25px;
+    max-width: 648px;
+    width: 70%;
+    height: auto;
+
+    @media (max-width: 750px) {
+      top: -3em;
+
+    }
+
+    @media (max-width: 600px) {
+      width: 90%;
+    }
+  }
+
+  .title_container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: min(4vw, 61px);
+    margin: 0 auto;
+    max-width: 820px;
+    width: 100%;
+
+    .treat {
+      margin-top: -2em;
+      width: min(calc(150px + 84 * (100vw - 375px) / 905), 234px);
+      height: min(calc(129px + 73 * (100vw - 375px) / 905), 202px);
+
+      @media (max-width: 750px) {
+        margin: 0 auto;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .title {
+      width: min(calc(325px + 200 * (100vw - 375px) / 906), 525px);
+      @include g.title;
+
+      h2 {
+        white-space: nowrap;
+      }
+
+      @media (max-width: 750px) {
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 750px) {
+      flex-direction: column;
+    }
+  }
+
+  .howto_container {
+    margin: 0 auto;
+    padding-top: 46px;
+    max-width: 1100px;
+    width: 100%;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: row wrap;
+      gap: max(3vw, 40px);
+
+      @media (min-width: 1280px) {
+        flex-flow: unset;
+      }
+
+      figure {
+        border-radius: 3px;
+        width: 325px;
+        background: g.$back;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 195px;
+          object-fit: cover;
+        }
+
+        figcaption {
+          position: relative;
+          padding: 19px 20px 77px;
+          overflow: hidden;
+          header {
+            margin-bottom: 20px;
+            font-size: 1.7rem;
+            font-weight: 600;
+            line-height: calc(22 / 17);
+            text-align: center;
+            letter-spacing: 0.1em;
+          }
+          p {
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: calc(23 / 13);
+            letter-spacing: 0.05em;
+            // text-align: justify;
+          }
+          .card-number {
+            position: absolute;
+            bottom: -22px;
+            right: 12px;
+            width: 85px;
+            height: 97px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+
+        @media (max-width: 374px) {
+          max-width: 315px;
+          width: calc(100vw - 50px);
+        }
+
+        @media (min-width: 590px) and (max-width: 1100px) {
+          display: flex;
+          width: 100%;
+          max-width: 730px;
+
+          img {
+            width: 45%;
+            max-width: 325px;
+            height: unset;
+          }
+
+          figcaption {
+            padding: 31px 5% 60px;
+          }
+        }
+
+        @media (max-width: 589px) {
+          figcaption {
+            padding: 10px 18px 70px;
+
+            p {
+              line-height: calc(21 / 13);
+              letter-spacing: 0.01em;
+            }
+
+            .card-number {
+              bottom: -30px;
+              right: 21px;
+              width: 74px;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 500px) {
+      padding-top: 35px;
+    }
+  }
+}

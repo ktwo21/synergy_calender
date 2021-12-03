@@ -1,0 +1,195 @@
+@use "../../global/" as g;
+
+.member {
+  position: relative;
+  z-index: 1;
+  margin: -0.5em auto 0;
+  padding: 70px 25px 119px;
+  width: 100%;
+  background: g.$base;
+
+  @media (max-width: 490px) {
+    padding-bottom: 56px;
+  }
+
+  .title_container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 10px 26px;
+
+    @media (max-width: 824px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .treat {
+      margin-top: -35px;
+      width: min(calc(155px + 89 * (100vw - 375px) / 905), 244px);
+      height: min(calc(165px + 96 * (100vw - 375px) / 905), 261px);
+
+      @media (max-width: 490px) {
+        margin-top: -6px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .title {
+      width: 100%;
+      max-width: 550px;
+      @include g.title;
+    }
+  }
+
+  // ここからメンバー
+  .member_container {
+    margin: 0 auto;
+    padding: 74px 0 0;
+    max-width: 1100px;
+    width: 100%;
+
+    @media (max-width: 490px) {
+      padding-top: 40px;
+    }
+
+    .grid,
+    .sp_grid .list ol,
+    .sp_grid .member_accordion ol {
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      gap: min(calc(15px + 30 * (100vw - 375px) / 649), 45px) min(calc(25px + 37 * (100vw - 375px) / 649), 62px);
+
+      li {
+        figure {
+          display: flex;
+          align-items: center;
+          border-radius: 3px;
+          width: 325px;
+          height: 95px;
+          background: g.$back;
+
+          @media (max-width: 374px) {
+            max-width: 325px;
+            width: calc(100vw - 50px);
+          }
+
+          img {
+            border-radius: 3px 0 0 3px;
+            width: 95px;
+            height: 95px;
+            object-fit: contain;
+          }
+
+          figcaption {
+            padding: 13px 12px;
+            height: 95px;
+
+            .name {
+              dt {
+                margin-bottom: 0.6em;
+                font-size: min(calc(1.2rem + 1 * (100vw - 375px) / 905), 1.3rem);
+                font-weight: 400;
+                line-height: calc(15 / 13);
+                letter-spacing: 0.1em;
+                white-space: nowrap;
+              }
+              dd {
+                font-size: min(calc(1.4rem + 2 * (100vw - 375px) / 905), 1.6rem);
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                white-space: nowrap;
+              }
+            }
+
+            .links {
+              display: flex;
+              align-items: center;
+
+              a {
+                padding: 5px 0 9px;
+                color: g.$link;
+                font-size: min(calc(1.2rem + 2 * (100vw - 375px) / 905), 1.4rem);
+                font-weight: 600;
+                text-decoration: underline;
+                letter-spacing: 0.05em;
+                transition: all 0.3s;
+
+                &:hover {
+                  transition: all 0.3s;
+                  color: rgba(221, 160, 88, 0.7);
+                }
+              }
+
+              p {
+                margin: 0 5px;
+              }
+
+              &::after {
+                content: "";
+                display: block;
+                margin-top: -0.2em;
+                margin-left: 9px;
+                width: 11px;
+                height: 11px;
+                background: url(../image/togo_member.svg) no-repeat center/contain;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .grid {
+      &::before {
+        content: "";
+        display: block;
+        width: 325px;
+        order: 1;
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 325px;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    .sp_grid {
+      display: none;
+      .list {
+        margin-bottom: min(calc(25px + 35 * (100vw - 375px) / 649), 60px);
+      }
+
+      .member_accordion {
+        .accordion_button {
+          @include g.accordion-button;
+        }
+
+        .accordion_list {
+          display: none;
+          opacity: 0;
+        }
+
+        .accordion_close_button {
+          display: none;
+          @include g.accordion-close-button;
+          margin-top: min(calc(25px + 35 * (100vw - 375px) / 649), 60px);
+        }
+      }
+
+      @media (max-width: 767px) {
+        display: block;
+      }
+    }
+  }
+}

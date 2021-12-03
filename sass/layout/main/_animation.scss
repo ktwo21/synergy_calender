@@ -1,0 +1,246 @@
+// イラスト
+.slide {
+  position: relative;
+  overflow: hidden;
+  /* 画像のサイズに合わせて変更ください */
+  width: min(calc(62px + 23 * (100vw - 375px) / 645), 85px);
+  height: min(calc(62px + 23 * (100vw - 375px) / 645), 85px);
+}
+
+.slide img {
+  display: block;
+  position: absolute;
+  /* 画像のサイズを表示エリアに合せる */
+  width: inherit;
+  height: inherit;
+  opacity: 0;
+}
+
+.slide1 img {
+  animation: slideAnime1 6s ease infinite;
+  &:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  &:nth-of-type(2) {
+    animation-delay: 3s;
+  }
+  // &:nth-of-type(3) {
+  //   animation-delay: 6s;
+  // }
+}
+
+.slide3 img {
+  animation: slideAnime3 10s ease infinite;
+  &:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  &:nth-of-type(2) {
+    animation-delay: 5s;
+  }
+}
+.slide4 img {
+  animation: slideAnime4 12s ease infinite;
+  &:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  &:nth-of-type(2) {
+    animation-delay: 6s;
+  }
+}
+.slide5 img {
+  animation: slideAnime5 14s ease infinite;
+  &:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  &:nth-of-type(2) {
+    animation-delay: 7s;
+  }
+}
+.slide6 img {
+  animation: slideAnime6 8s ease infinite;
+  &:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  &:nth-of-type(2) {
+    animation-delay: 4s;
+  }
+}
+.slide7 img {
+  animation: slideAnime7 16s ease infinite;
+  &:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  &:nth-of-type(2) {
+    animation-delay: 8s;
+  }
+}
+.slide8 img {
+  animation: slideAnime8 18s ease infinite;
+  &:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+  &:nth-of-type(2) {
+    animation-delay: 9s;
+  }
+}
+
+/*=== スライドのアニメーション ========================= */
+@keyframes slideAnime1 {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  12% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  38% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  50% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes slideAnime3 {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  6% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  44% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  50% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes slideAnime4 {
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  6% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+  44% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+  50% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes slideAnime5 {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  5% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  45% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  50% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes slideAnime6 {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  8% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  42% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  50% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes slideAnime7 {
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  4% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+  46% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+  50% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+}
+@keyframes slideAnime8 {
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  3% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+  47% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+  50% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+}

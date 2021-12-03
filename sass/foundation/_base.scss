@@ -1,0 +1,57 @@
+@use "../global/" as g;
+
+@font-face {
+  font-family: NotoSansJP;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NotoSansJP-DemiLight.woff2) format("woff2"), url(../font/NotoSansJP-DemiLight.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: NotoSansJP;
+  font-style: normal;
+  font-weight: 600;
+  src: url(../font/NotoSansJP-Medium.woff2) format("woff2"), url(../font/NotoSansJP-Medium.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: NotoSansJP;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../font/NotoSansJP-Regular.woff2) format("woff2"), url(../font/NotoSansJP-Regular.woff) format("woff");
+  font-display: swap;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+*::selection {
+  color: white;
+  background: g.$accent;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  background: g.$base;
+  color: g.$text;
+  font-family: "NotoSansJP", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  font-weight: 500;
+}
+
+main {
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .sp_none {
+    display: none;
+  }
+}

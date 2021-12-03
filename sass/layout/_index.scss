@@ -1,0 +1,6 @@
+// layoutフォルダの_index/scss
+@use "l-header";
+@use "l-aside";
+@use "l-footer";
+
+@forward "main";
