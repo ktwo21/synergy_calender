@@ -15,6 +15,7 @@
   &::after {
     content: url(../image/page-1920.svg);
     position: absolute;
+    right: 0;
     bottom: 0;
     display: block;
     width: 100%;
@@ -60,6 +61,14 @@
       width: 100%;
       max-width: 550px;
       @include g.title;
+
+      @media (max-width: 1190px) and (min-width: 1070px) {
+        width: 40%;
+
+        .sp_none {
+          display: none;
+        }
+      }
 
       a {
         color: g.$link;
