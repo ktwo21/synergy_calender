@@ -1016,16 +1016,11 @@ footer .copyright small {
   letter-spacing: 0.1em;
   display: flex;
   align-items: center;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  padding-left: 15px;
   font-weight: 600;
-}
-.about .title_container .title header h2::before {
-  content: "";
-  display: block;
-  margin-right: 10px;
-  width: 25px;
-  height: 1.5px;
-  background: #10100f;
+  border-left: 25px solid #10100f;
+  line-height: 2px;
 }
 .about .title_container .title header p {
   font-size: min(calc(2rem + 10 * (100vw - 375px) / 905), 3rem);
@@ -1043,8 +1038,9 @@ footer .copyright small {
   .about .title_container .title header {
     margin-bottom: 2em;
   }
-  .about .title_container .title header h2::before {
-    width: 18px;
+  .about .title_container .title header h2 {
+    border-left: 20px solid #10100f;
+    line-height: 1.5px;
   }
 }
 .about .title_container .title .description p {
@@ -1160,16 +1156,11 @@ footer .copyright small {
   letter-spacing: 0.1em;
   display: flex;
   align-items: center;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  padding-left: 15px;
   font-weight: 600;
-}
-.howto .title_container .title header h2::before {
-  content: "";
-  display: block;
-  margin-right: 10px;
-  width: 25px;
-  height: 1.5px;
-  background: #10100f;
+  border-left: 25px solid #10100f;
+  line-height: 2px;
 }
 .howto .title_container .title header p {
   font-size: min(calc(2rem + 10 * (100vw - 375px) / 905), 3rem);
@@ -1187,8 +1178,9 @@ footer .copyright small {
   .howto .title_container .title header {
     margin-bottom: 2em;
   }
-  .howto .title_container .title header h2::before {
-    width: 18px;
+  .howto .title_container .title header h2 {
+    border-left: 20px solid #10100f;
+    line-height: 1.5px;
   }
 }
 .howto .title_container .title .description p {
@@ -1285,7 +1277,7 @@ footer .copyright small {
     width: calc(100vw - 50px);
   }
 }
-@media (min-width: 590px) and (max-width: 1100px) {
+@media (min-width: 590px) and (max-width: 1110px) {
   .howto .howto_container ol .howto_container__card_box {
     display: flex;
     width: 100%;
@@ -1355,16 +1347,11 @@ footer .copyright small {
   letter-spacing: 0.1em;
   display: flex;
   align-items: center;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  padding-left: 15px;
   font-weight: 600;
-}
-.print .title header h2::before {
-  content: "";
-  display: block;
-  margin-right: 10px;
-  width: 25px;
-  height: 1.5px;
-  background: #10100f;
+  border-left: 25px solid #10100f;
+  line-height: 2px;
 }
 .print .title header p {
   font-size: min(calc(2rem + 10 * (100vw - 375px) / 905), 3rem);
@@ -1382,8 +1369,9 @@ footer .copyright small {
   .print .title header {
     margin-bottom: 2em;
   }
-  .print .title header h2::before {
-    width: 18px;
+  .print .title header h2 {
+    border-left: 20px solid #10100f;
+    line-height: 1.5px;
   }
 }
 .print .title .description p {
@@ -1407,8 +1395,8 @@ footer .copyright small {
   color: #10100f;
   background: white;
 }
-.print .title header h2::before {
-  background: white;
+.print .title header h2 {
+  border-color: white;
 }
 .print .print_container {
   display: flex;
@@ -1616,16 +1604,11 @@ footer .copyright small {
   letter-spacing: 0.1em;
   display: flex;
   align-items: center;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  padding-left: 15px;
   font-weight: 600;
-}
-.illust .title_container .title header h2::before {
-  content: "";
-  display: block;
-  margin-right: 10px;
-  width: 25px;
-  height: 1.5px;
-  background: #10100f;
+  border-left: 25px solid #10100f;
+  line-height: 2px;
 }
 .illust .title_container .title header p {
   font-size: min(calc(2rem + 10 * (100vw - 375px) / 905), 3rem);
@@ -1643,8 +1626,9 @@ footer .copyright small {
   .illust .title_container .title header {
     margin-bottom: 2em;
   }
-  .illust .title_container .title header h2::before {
-    width: 18px;
+  .illust .title_container .title header h2 {
+    border-left: 20px solid #10100f;
+    line-height: 1.5px;
   }
 }
 .illust .title_container .title .description p {
@@ -2071,16 +2055,11 @@ img.modal_image {
   letter-spacing: 0.1em;
   display: flex;
   align-items: center;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  padding-left: 15px;
   font-weight: 600;
-}
-.member .title_container .title header h2::before {
-  content: "";
-  display: block;
-  margin-right: 10px;
-  width: 25px;
-  height: 1.5px;
-  background: #10100f;
+  border-left: 25px solid #10100f;
+  line-height: 2px;
 }
 .member .title_container .title header p {
   font-size: min(calc(2rem + 10 * (100vw - 375px) / 905), 3rem);
@@ -2098,8 +2077,9 @@ img.modal_image {
   .member .title_container .title header {
     margin-bottom: 2em;
   }
-  .member .title_container .title header h2::before {
-    width: 18px;
+  .member .title_container .title header h2 {
+    border-left: 20px solid #10100f;
+    line-height: 1.5px;
   }
 }
 .member .title_container .title .description p {

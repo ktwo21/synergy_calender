@@ -33,9 +33,7 @@
 
     header {
       h2 {
-        &::before {
-          background: white;
-        }
+        border-color: white;
       }
     }
   }
