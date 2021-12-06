@@ -1223,7 +1223,7 @@ footer .copyright small {
   max-width: 1100px;
   width: 100%;
 }
-.howto .howto_container ul {
+.howto .howto_container ol {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1231,28 +1231,28 @@ footer .copyright small {
   gap: max(3vw, 40px);
 }
 @media (min-width: 1280px) {
-  .howto .howto_container ul {
+  .howto .howto_container ol {
     flex-flow: unset;
   }
 }
-.howto .howto_container ul figure {
+.howto .howto_container ol .howto_container__card_box {
   border-radius: 3px;
   width: 325px;
   background: #f4f0e9;
   overflow: hidden;
 }
-.howto .howto_container ul figure img {
+.howto .howto_container ol .howto_container__card_box img {
   width: 100%;
   height: 195px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.howto .howto_container ul figure figcaption {
+.howto .howto_container ol .howto_container__card_box .hawto_container__card_box__text {
   position: relative;
   padding: 19px 20px 77px;
   overflow: hidden;
 }
-.howto .howto_container ul figure figcaption header {
+.howto .howto_container ol .howto_container__card_box .hawto_container__card_box__text header {
   margin-bottom: 20px;
   font-size: 1.7rem;
   font-weight: 600;
@@ -1260,55 +1260,55 @@ footer .copyright small {
   text-align: center;
   letter-spacing: 0.1em;
 }
-.howto .howto_container ul figure figcaption p {
+.howto .howto_container ol .howto_container__card_box .hawto_container__card_box__text p {
   font-size: 1.3rem;
   font-weight: 500;
   line-height: calc(23 / 13);
   letter-spacing: 0.05em;
 }
-.howto .howto_container ul figure figcaption .card-number {
+.howto .howto_container ol .howto_container__card_box .hawto_container__card_box__text .card-number {
   position: absolute;
   bottom: -22px;
   right: 12px;
   width: 85px;
   height: 97px;
 }
-.howto .howto_container ul figure figcaption .card-number img {
+.howto .howto_container ol .howto_container__card_box .hawto_container__card_box__text .card-number img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
 @media (max-width: 374px) {
-  .howto .howto_container ul figure {
+  .howto .howto_container ol .howto_container__card_box {
     max-width: 315px;
     width: calc(100vw - 50px);
   }
 }
 @media (min-width: 590px) and (max-width: 1100px) {
-  .howto .howto_container ul figure {
+  .howto .howto_container ol .howto_container__card_box {
     display: flex;
     width: 100%;
     max-width: 730px;
   }
-  .howto .howto_container ul figure img {
+  .howto .howto_container ol .howto_container__card_box img {
     width: 45%;
     max-width: 325px;
     height: unset;
   }
-  .howto .howto_container ul figure figcaption {
+  .howto .howto_container ol .howto_container__card_box .hawto_container__card_box__text {
     padding: 31px 5% 60px;
   }
 }
 @media (max-width: 589px) {
-  .howto .howto_container ul figure figcaption {
+  .howto .howto_container ol .howto_container__card_box .hawto_container__card_box__text {
     padding: 10px 18px 70px;
   }
-  .howto .howto_container ul figure figcaption p {
+  .howto .howto_container ol .howto_container__card_box .hawto_container__card_box__text p {
     line-height: calc(21 / 13);
     letter-spacing: 0.01em;
   }
-  .howto .howto_container ul figure figcaption .card-number {
+  .howto .howto_container ol .howto_container__card_box .hawto_container__card_box__text .card-number {
     bottom: -25px;
     right: 21px;
     width: 74px;
@@ -1785,11 +1785,11 @@ footer .copyright small {
     width: 40vw;
   }
 }
-.illust .illust_container .grid li figure {
+.illust .illust_container .grid li .illust_container__card_box {
   max-width: 220px;
   width: 100%;
 }
-.illust .illust_container .grid li figure .illust_image {
+.illust .illust_container .grid li .illust_container__card_box .illust_image {
   position: relative;
   width: min(calc(150px + 70 * (100vw - 375px) / 649), 220px);
   height: min(calc(131px + 59 * (100vw - 375px) / 649), 190px);
@@ -1797,7 +1797,7 @@ footer .copyright small {
   overflow: hidden;
   border-radius: 3px;
 }
-.illust .illust_container .grid li figure .illust_image::after {
+.illust .illust_container .grid li .illust_container__card_box .illust_image::after {
   content: "";
   position: absolute;
   display: block;
@@ -1810,12 +1810,12 @@ footer .copyright small {
           filter: drop-shadow(0px 3px 3px rgba(16, 16, 15, 0.3));
 }
 @media (max-width: 490px) {
-  .illust .illust_container .grid li figure .illust_image {
+  .illust .illust_container .grid li .illust_container__card_box .illust_image {
     width: 100%;
     height: 35vw;
   }
 }
-.illust .illust_container .grid li figure .illust_image img {
+.illust .illust_container .grid li .illust_container__card_box .illust_image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1823,22 +1823,22 @@ footer .copyright small {
   vertical-align: bottom;
   transition: all 0.3s;
 }
-.illust .illust_container .grid li figure .illust_image img:hover {
+.illust .illust_container .grid li .illust_container__card_box .illust_image img:hover {
   -webkit-transform: scale(1.05, 1.05);
           transform: scale(1.05, 1.05);
   transition: all 0.4s;
   opacity: 0.8;
 }
-.illust .illust_container .grid li figure .illust_image .contain_image {
+.illust .illust_container .grid li .illust_container__card_box .illust_image .contain_image {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.illust .illust_container .grid li figure figcaption {
+.illust .illust_container .grid li .illust_container__card_box .illust_container__card_box__text {
   padding-top: 0.7em;
   text-align: center;
   font-weight: 500;
 }
-.illust .illust_container .grid li figure figcaption .author {
+.illust .illust_container .grid li .illust_container__card_box .illust_container__card_box__text .author {
   display: flex;
   gap: 6px;
   margin-left: 0.3em;
@@ -1850,14 +1850,14 @@ footer .copyright small {
   white-space: nowrap;
 }
 @media (max-width: 490px) {
-  .illust .illust_container .grid li figure figcaption .author {
+  .illust .illust_container .grid li .illust_container__card_box .illust_container__card_box__text .author {
     margin-bottom: 0.1em;
   }
-  .illust .illust_container .grid li figure figcaption .author .usako {
+  .illust .illust_container .grid li .illust_container__card_box .illust_container__card_box__text .author .usako {
     letter-spacing: 0em;
   }
 }
-.illust .illust_container .grid li figure figcaption .print_number {
+.illust .illust_container .grid li .illust_container__card_box .illust_container__card_box__text .print_number {
   position: relative;
   display: flex;
   gap: 6px;
@@ -2134,9 +2134,9 @@ img.modal_image {
   flex-flow: row wrap;
   gap: min(calc(15px + 30 * (100vw - 375px) / 649), 45px) min(calc(25px + 37 * (100vw - 375px) / 649), 62px);
 }
-.member .member_container .grid li figure,
-.member .member_container .sp_grid .list ol li figure,
-.member .member_container .sp_grid .member_accordion ol li figure {
+.member .member_container .grid li .member_container__card_box,
+.member .member_container .sp_grid .list ol li .member_container__card_box,
+.member .member_container .sp_grid .member_accordion ol li .member_container__card_box {
   display: flex;
   align-items: center;
   border-radius: 3px;
@@ -2145,31 +2145,31 @@ img.modal_image {
   background: #f4f0e9;
 }
 @media (max-width: 374px) {
-  .member .member_container .grid li figure,
-.member .member_container .sp_grid .list ol li figure,
-.member .member_container .sp_grid .member_accordion ol li figure {
+  .member .member_container .grid li .member_container__card_box,
+.member .member_container .sp_grid .list ol li .member_container__card_box,
+.member .member_container .sp_grid .member_accordion ol li .member_container__card_box {
     max-width: 325px;
     width: calc(100vw - 50px);
   }
 }
-.member .member_container .grid li figure img,
-.member .member_container .sp_grid .list ol li figure img,
-.member .member_container .sp_grid .member_accordion ol li figure img {
+.member .member_container .grid li .member_container__card_box img,
+.member .member_container .sp_grid .list ol li .member_container__card_box img,
+.member .member_container .sp_grid .member_accordion ol li .member_container__card_box img {
   border-radius: 3px 0 0 3px;
   width: 95px;
   height: 95px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.member .member_container .grid li figure figcaption,
-.member .member_container .sp_grid .list ol li figure figcaption,
-.member .member_container .sp_grid .member_accordion ol li figure figcaption {
+.member .member_container .grid li .member_container__card_box .member_container__card_box__text,
+.member .member_container .sp_grid .list ol li .member_container__card_box .member_container__card_box__text,
+.member .member_container .sp_grid .member_accordion ol li .member_container__card_box .member_container__card_box__text {
   padding: 13px 12px;
   height: 95px;
 }
-.member .member_container .grid li figure figcaption .name dt,
-.member .member_container .sp_grid .list ol li figure figcaption .name dt,
-.member .member_container .sp_grid .member_accordion ol li figure figcaption .name dt {
+.member .member_container .grid li .member_container__card_box .member_container__card_box__text .name dt,
+.member .member_container .sp_grid .list ol li .member_container__card_box .member_container__card_box__text .name dt,
+.member .member_container .sp_grid .member_accordion ol li .member_container__card_box .member_container__card_box__text .name dt {
   margin-bottom: 0.6em;
   font-size: min(calc(1.2rem + 1 * (100vw - 375px) / 905), 1.3rem);
   font-weight: 400;
@@ -2177,23 +2177,23 @@ img.modal_image {
   letter-spacing: 0.1em;
   white-space: nowrap;
 }
-.member .member_container .grid li figure figcaption .name dd,
-.member .member_container .sp_grid .list ol li figure figcaption .name dd,
-.member .member_container .sp_grid .member_accordion ol li figure figcaption .name dd {
+.member .member_container .grid li .member_container__card_box .member_container__card_box__text .name dd,
+.member .member_container .sp_grid .list ol li .member_container__card_box .member_container__card_box__text .name dd,
+.member .member_container .sp_grid .member_accordion ol li .member_container__card_box .member_container__card_box__text .name dd {
   font-size: min(calc(1.4rem + 2 * (100vw - 375px) / 905), 1.6rem);
   font-weight: 600;
   letter-spacing: 0.1em;
   white-space: nowrap;
 }
-.member .member_container .grid li figure figcaption .links,
-.member .member_container .sp_grid .list ol li figure figcaption .links,
-.member .member_container .sp_grid .member_accordion ol li figure figcaption .links {
+.member .member_container .grid li .member_container__card_box .member_container__card_box__text .links,
+.member .member_container .sp_grid .list ol li .member_container__card_box .member_container__card_box__text .links,
+.member .member_container .sp_grid .member_accordion ol li .member_container__card_box .member_container__card_box__text .links {
   display: flex;
   align-items: center;
 }
-.member .member_container .grid li figure figcaption .links a,
-.member .member_container .sp_grid .list ol li figure figcaption .links a,
-.member .member_container .sp_grid .member_accordion ol li figure figcaption .links a {
+.member .member_container .grid li .member_container__card_box .member_container__card_box__text .links a,
+.member .member_container .sp_grid .list ol li .member_container__card_box .member_container__card_box__text .links a,
+.member .member_container .sp_grid .member_accordion ol li .member_container__card_box .member_container__card_box__text .links a {
   padding: 5px 0 9px;
   color: #dda058;
   font-size: min(calc(1.2rem + 2 * (100vw - 375px) / 905), 1.4rem);
@@ -2202,20 +2202,20 @@ img.modal_image {
   letter-spacing: 0.05em;
   transition: all 0.3s;
 }
-.member .member_container .grid li figure figcaption .links a:hover,
-.member .member_container .sp_grid .list ol li figure figcaption .links a:hover,
-.member .member_container .sp_grid .member_accordion ol li figure figcaption .links a:hover {
+.member .member_container .grid li .member_container__card_box .member_container__card_box__text .links a:hover,
+.member .member_container .sp_grid .list ol li .member_container__card_box .member_container__card_box__text .links a:hover,
+.member .member_container .sp_grid .member_accordion ol li .member_container__card_box .member_container__card_box__text .links a:hover {
   transition: all 0.3s;
   color: rgba(221, 160, 88, 0.7);
 }
-.member .member_container .grid li figure figcaption .links p,
-.member .member_container .sp_grid .list ol li figure figcaption .links p,
-.member .member_container .sp_grid .member_accordion ol li figure figcaption .links p {
+.member .member_container .grid li .member_container__card_box .member_container__card_box__text .links p,
+.member .member_container .sp_grid .list ol li .member_container__card_box .member_container__card_box__text .links p,
+.member .member_container .sp_grid .member_accordion ol li .member_container__card_box .member_container__card_box__text .links p {
   margin: 0 5px;
 }
-.member .member_container .grid li figure figcaption .links::after,
-.member .member_container .sp_grid .list ol li figure figcaption .links::after,
-.member .member_container .sp_grid .member_accordion ol li figure figcaption .links::after {
+.member .member_container .grid li .member_container__card_box .member_container__card_box__text .links::after,
+.member .member_container .sp_grid .list ol li .member_container__card_box .member_container__card_box__text .links::after,
+.member .member_container .sp_grid .member_accordion ol li .member_container__card_box .member_container__card_box__text .links::after {
   content: "";
   display: block;
   margin-top: -0.2em;

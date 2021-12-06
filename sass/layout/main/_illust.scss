@@ -196,8 +196,8 @@
         @media (max-width: 490px) {
           width: 40vw;
         }
-
-        figure {
+       
+        .illust_container__card_box {
           max-width: 220px;
           width: 100%;
 
@@ -245,7 +245,7 @@
             }
           }
 
-          figcaption {
+          .illust_container__card_box__text {
             padding-top: 0.7em;
             text-align: center;
             font-weight: 500;

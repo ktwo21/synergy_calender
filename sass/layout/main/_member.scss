@@ -67,7 +67,7 @@
       gap: min(calc(15px + 30 * (100vw - 375px) / 649), 45px) min(calc(25px + 37 * (100vw - 375px) / 649), 62px);
 
       li {
-        figure {
+        .member_container__card_box {
           display: flex;
           align-items: center;
           border-radius: 3px;
@@ -87,7 +87,7 @@
             object-fit: contain;
           }
 
-          figcaption {
+          .member_container__card_box__text {
             padding: 13px 12px;
             height: 95px;
 

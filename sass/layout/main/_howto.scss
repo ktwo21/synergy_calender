@@ -22,7 +22,6 @@
 
     @media (max-width: 750px) {
       top: -3em;
-
     }
 
     @media (max-width: 600px) {
@@ -83,7 +82,7 @@
     max-width: 1100px;
     width: 100%;
 
-    ul {
+    ol {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -94,7 +93,7 @@
         flex-flow: unset;
       }
 
-      figure {
+      .howto_container__card_box {
         border-radius: 3px;
         width: 325px;
         background: g.$back;
@@ -106,7 +105,7 @@
           object-fit: cover;
         }
 
-        figcaption {
+         .hawto_container__card_box__text {
           position: relative;
           padding: 19px 20px 77px;
           overflow: hidden;
@@ -156,13 +155,13 @@
             height: unset;
           }
 
-          figcaption {
+           .hawto_container__card_box__text {
             padding: 31px 5% 60px;
           }
         }
 
         @media (max-width: 589px) {
-          figcaption {
+           .hawto_container__card_box__text {
             padding: 10px 18px 70px;
 
             p {
