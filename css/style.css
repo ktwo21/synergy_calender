@@ -1792,6 +1792,7 @@ footer .copyright small {
   background: url(../image/zoom.svg) no-repeat 50% 50%;
   -webkit-filter: drop-shadow(0px 3px 3px rgba(16, 16, 15, 0.3));
           filter: drop-shadow(0px 3px 3px rgba(16, 16, 15, 0.3));
+  pointer-events: none;
 }
 @media (max-width: 490px) {
   .illust .illust_container .grid li .illust_container__card_box .illust_image {
